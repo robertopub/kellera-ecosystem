@@ -67,12 +67,6 @@ data/
 
 ---
 
-## 🌡️ Sensor de temperatura integrado
-
-![Sensor de Temperatura](./images/temp-sensor.jpg)
-
----
-
 # 🎥 Vídeos dos testes
 
 ## 🎬 Teste RGB + temperatura — Parte 1
