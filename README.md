@@ -51,5 +51,45 @@ data/
 * Integração com dispositivos inteligentes
 
 ---
+---
 
+# 📸 Evolução do Projeto
+
+## 🔧 Configuração inicial
+
+![ESP32 Inicial](./images/esp32-start.jpg)
+
+---
+
+## 🌈 LED RGB funcionando
+
+![LED RGB](./images/rgb-working.jpg)
+
+---
+
+## 🌡️ Sensor de temperatura integrado
+
+![Sensor de Temperatura](./images/temp-sensor.jpg)
+
+---
+
+# 🎥 Vídeos dos testes
+
+## 🎬 Teste RGB + temperatura — Parte 1
+
+[▶️ Assistir vídeo 1](./videos/temperature-response-vd01.mp4)
+
+---
+
+## 🎬 Teste RGB + temperatura — Parte 2
+
+[▶️ Assistir vídeo 2](./videos/temperature-response-vd02.mp4)
+
+---
+
+## 🎬 Teste RGB + temperatura — Parte 3
+
+[▶️ Assistir vídeo 3](./videos/temperature-response-vd03.mp4)
+
+---
 **Kellera — tecnologia para ampliar capacidades humanas**
