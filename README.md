@@ -71,13 +71,13 @@ data/
 
 ## 🎬 Teste RGB + temperatura — Parte 1
 
-[▶️ Assistir vídeo 1](./videos/temperature-response-vd01.mp4)
+[▶️ Assistir vídeo 1](./kellera-live-biometric-system.mp4)
 
 ---
 
 ## 🎬 Teste RGB + temperatura — Parte 2
 
-[▶️ Assistir vídeo 2](./videos/temperature-response-vd02.mp4)
+[▶️ Assistir vídeo 2](./temperature-response-vd02.mp4)
 
 ---
 
