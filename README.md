@@ -71,7 +71,7 @@ data/
 
 ## 🎬 Teste RGB + temperatura — Parte 1
 
-[▶️ Assistir vídeo 1](./kellera-live-biometric-system.mp4)
+[▶️ Assistir vídeo 1](./videos/kellera-live-biometric-system.mp4)
 
 ---
 
