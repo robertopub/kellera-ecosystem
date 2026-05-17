@@ -92,6 +92,15 @@ O projeto evolui como uma interface biométrica em tempo real entre sinais biol�
 A proposta é transformar dados fisiológicos em uma camada visual inteligente, acessível e interpretável em tempo real.
 
 ---
+# Imagens
+
+![Kellera](../images/kellera-app-live.jpg)
+
+![ESP32](../images/esp32-connected.jpg)
+
+![ESP32](../images/arduino-serialbt.jpg)
+
+---
 
 # Próximo passo
 
