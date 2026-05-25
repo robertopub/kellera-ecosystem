@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#000000"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="KELLERA BIO SYSTEM"
+        android:textColor="#00FFD1"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="40dp"/>
+
+    <TextView
+        android:id="@+id/txtBluetooth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bluetooth: LIGADO"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:id="@+id/txtBpm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="❤ 78 BPM"
+        android:textColor="#FF4444"
+        android:textSize="42sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/txtStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="STATUS: CALMO"
+        android:textColor="#00FF88"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="40dp"/>
+
+    <TextView
+        android:id="@+id/txtDevices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dispositivos encontrados:"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"/>
+
+</LinearLayout>
