@@ -3,10 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.BLUETOOTH"/>
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
-    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
-    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"/>
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+
+    <queries>
+
+        <package android:name="com.android.chrome" />
+
+        <package android:name="com.whatsapp" />
+
+        <package android:name="com.google.android.youtube" />
+
+    </queries>
 
     <application
         android:allowBackup="true"
@@ -18,9 +29,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KELLERA">
 
+        <!-- 🚀 MAIN KELLERA -->
         <activity
-            android:name=".biosystem.BiometricActivity"
-            android:exported="true">
+            android:name=".core.MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.KELLERA">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,13 +44,12 @@
 
         </activity>
 
+        <!-- ❤️ BIOSYSTEM -->
         <activity
-            android:name=".core.MainActivity"
-            android:exported="false"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.KELLERA">
-        </activity>
+            android:name=".biosystem.BiometricActivity"
+            android:exported="false" />
 
+        <!-- ♿ ACCESSIBILITY -->
         <service
             android:name=".services.KelleraAccessibilityService"
             android:exported="true"
