@@ -1,12 +1,19 @@
-# Kellera Bio Aura System
+# KELLERA Ecosystem
+Human Intention Interface
 
-Sistema embarcado experimental para leitura e visualização de sinais biológicos em tempo real.
+Ecossistema de acessibilidade, inteligência artificial e interação humano-computador.
 
 ## Sobre o projeto
 
-Este projeto faz parte da iniciativa **Kellera**, cujo objetivo é desenvolver tecnologias capazes de ampliar as capacidades humanas através da interpretação de dados biológicos.
+Este repositório contém o desenvolvimento operacional do ecossistema KELLERA, incluindo:
 
-A proposta é capturar sinais do corpo humano e transformá-los em uma representação visual simples e intuitiva, permitindo melhor compreensão do estado físico e emocional.
+• sistemas de acessibilidade
+• interação conversacional no Android
+• interpretação de sinais biológicos
+• sistemas embarcados
+• assistência contextual
+• interação por voz
+• interfaces de intenção humana
 
 ## Objetivo
 
