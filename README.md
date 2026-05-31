@@ -130,7 +130,14 @@ A visão futura envolve:
 
 ## 🔧 Integração ESP32 + Sensores
 
-![ESP32](./images/rgb-working.jpg)
+![ESP32](./images/esp32-connected.jpg)
+
+![KELLERA App](./images/kellera-app-live.jpg)
+
+
+# 🎥 Demonstração
+
+[▶️ Assistir demonstração do KELLERA](./videos/kellera-demo.mp4)
 
 ---
 
