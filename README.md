@@ -1,96 +1,162 @@
 # KELLERA Ecosystem
-Human Intention Interface
+
+### Human Intention Interface
 
 Ecossistema de acessibilidade, inteligência artificial e interação humano-computador.
 
-## Sobre o projeto
+---
+
+# 🧠 Sobre o projeto
 
 Este repositório contém o desenvolvimento operacional do ecossistema KELLERA, incluindo:
 
-• sistemas de acessibilidade
-• interação conversacional no Android
-• interpretação de sinais biológicos
-• sistemas embarcados
-• assistência contextual
-• interação por voz
-• interfaces de intenção humana
-
-## Objetivo
-
-* Ler sinais biológicos em tempo real
-* Interpretar esses dados
-* Traduzir em uma visualização (LED / interface)
-
-## Tecnologias utilizadas
-
-* ESP32
-* Sensor MAX30102 (batimento cardíaco)
-* Sensor GSR (condutividade da pele)
-* Sensor DS18B20 (temperatura)
-* LED RGB
-
-## Estrutura do projeto
-
-```bash
-hardware/
-firmware/
-docs/
-data/
-```
-
-## Status
-
-🚧 Em desenvolvimento (fase inicial)
-
-## Próximos passos
-
-* Integração dos sensores
-* Leitura dos dados em tempo real
-* Criação da lógica de interpretação
-* Visualização através de LED
-* Evolução para aplicação com interface gráfica
-
-## Visão futura
-
-* Interface estilo HUD (realidade aumentada)
-* Aplicações em esportes e performance humana
-* Uso em saúde e monitoramento
-* Integração com dispositivos inteligentes
+• sistemas de acessibilidade  
+• interação conversacional no Android  
+• interpretação de sinais biológicos  
+• sistemas embarcados  
+• assistência contextual  
+• interação por voz  
+• interfaces de intenção humana  
 
 ---
+
+# ♿ Objetivo
+
+O KELLERA nasceu com o objetivo de reduzir a dependência visual da tecnologia.
+
+A proposta é permitir que pessoas possam utilizar dispositivos através de intenção, voz, contexto e interação natural — reduzindo a necessidade de telas, menus e interfaces complexas.
+
+O foco inicial está em acessibilidade para deficientes visuais, mas a visão de longo prazo envolve uma nova forma de interação humano-computador.
+
+---
+
+# 🚀 Capacidades Atuais
+
+✅ desbloqueio biométrico
+
+✅ interação conversacional no Android
+
+✅ abertura de aplicativos por voz
+
+✅ conversa contínua
+
+✅ Accessibility Service
+
+✅ operação hands-free inicial
+
+✅ integração ESP32 + Android
+
+✅ interpretação biométrica inicial
+
+---
+
+# 🧩 Módulos do Ecossistema
+
+## 👁️ KELLERA VISION
+
+Sistema de acessibilidade visual e operação assistida por voz.
+
+---
+
+## ❤️ KELLERA BIOSYSTEM
+
+Sistema biométrico e corporal integrado ao ecossistema.
+
+---
+
+## ⚡ KELLERA AURA
+
+Interpretação contextual humana através de sinais físicos, ambientais e comportamentais.
+
+---
+
+## 🧠 KELLERA CORE
+
+Arquitetura central e gerenciamento dos módulos compartilhados do ecossistema.
+
+---
+
+# 🛠️ Tecnologias Utilizadas
+
+• Kotlin  
+• Android Studio  
+• Accessibility Service  
+• ESP32  
+• MAX30102  
+• Bluetooth  
+• Sensores biométricos  
+• Inteligência Artificial  
+• Sistemas embarcados  
+
+---
+
+# 📱 Funcionalidades em Desenvolvimento
+
+• desbloqueio inteligente por biometria
+
+• interação contínua por voz
+
+• automação contextual
+
+• leitura de sinais biológicos
+
+• interpretação de intenção humana
+
+• integração Android + sensores
+
+• operação assistiva para deficientes visuais
+
+• arquitetura de interface sem toque
+
+---
+
+# 🔮 Visão de Longo Prazo
+
+O objetivo do KELLERA é criar uma nova forma de interação humano-computador, reduzindo progressivamente a dependência de telas, toques e interfaces tradicionais.
+
+A visão futura envolve:
+
+• operação por intenção humana  
+• dispositivos vestíveis inteligentes  
+• integração biométrica contínua  
+• computação assistiva contextual  
+• acessibilidade avançada  
+• interpretação comportamental  
+• interação natural entre humanos e máquinas  
+
 ---
 
 # 📸 Evolução do Projeto
 
-## 🔧 Configuração inicial
+## 🔧 Integração ESP32 + Sensores
 
-![ESP32 Inicial](./images/esp32-start.jpg)
-
----
-
-## 🌈 LED RGB funcionando
-
-![LED RGB](./images/rgb-working.jpg)
+![ESP32](./images/rgb-working.jpg)
 
 ---
 
-# 🎥 Vídeos dos testes
+# 🚀 Status Atual
 
-## 🎬 Teste RGB + temperatura — Parte 1
+🚧 Ecossistema em desenvolvimento contínuo
 
-[▶️ Assistir vídeo 1](./videos/kellera-live-biometric-system.mp4)
+✅ Android conversacional funcional
+
+✅ comandos de voz funcionando
+
+✅ abertura de aplicativos por voz
+
+✅ arquitetura modular criada
+
+✅ integração biométrica iniciada
+
+---
+
+# 🤝 Propósito
+
+O KELLERA busca tornar a tecnologia mais humana, acessível e natural.
+
+A proposta central é permitir que pessoas utilizem dispositivos de forma mais intuitiva, especialmente usuários com limitações visuais ou motoras.
 
 ---
 
-## 🎬 Teste RGB + temperatura — Parte 2
-
-[▶️ Assistir vídeo 2](./temperature-response-vd02.mp4)
-
----
-
-## 🎬 Teste RGB + temperatura — Parte 3
-
-[▶️ Assistir vídeo 3](./videos/temperature-response-vd03.mp4)
-
----
-**Kellera — tecnologia para ampliar capacidades humanas**
+### KELLERA Ecosystem
+### Tecnologia humana para a próxima geração de interfaces.
