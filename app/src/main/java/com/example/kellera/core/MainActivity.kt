@@ -60,7 +60,10 @@ class MainActivity : FragmentActivity() {
 
     lateinit var tts: TextToSpeech
 
-    // 🔥 ESCUTA
+    // =====================================================
+    // ESCUTA
+    // =====================================================
+
     fun iniciarEscuta(
         context: Activity
     ) {
@@ -90,6 +93,10 @@ class MainActivity : FragmentActivity() {
         )
     }
 
+    // =====================================================
+    // ON CREATE
+    // =====================================================
+
     override fun onCreate(
         savedInstanceState: Bundle?
     ) {
@@ -115,6 +122,7 @@ class MainActivity : FragmentActivity() {
                 runOnUiThread {
 
                     iniciarEscuta(this)
+
                 }
             }
         }
@@ -160,7 +168,10 @@ class MainActivity : FragmentActivity() {
 
         enableEdgeToEdge()
 
-        // 🔊 TTS TEMPORÁRIO
+        // =====================================================
+        // TTS
+        // =====================================================
+
         tts = TextToSpeech(this) { status ->
 
             if (
@@ -208,7 +219,10 @@ class MainActivity : FragmentActivity() {
             }
         }
 
-        // 🔥 INTERFACE
+        // =====================================================
+        // INTERFACE
+        // =====================================================
+
         setContent {
 
             val spokenText =
@@ -231,6 +245,10 @@ class MainActivity : FragmentActivity() {
             }
         }
     }
+
+    // =====================================================
+    // RESULTADO VOZ
+    // =====================================================
 
     override fun onActivityResult(
 
@@ -289,6 +307,7 @@ class MainActivity : FragmentActivity() {
                 runOnUiThread {
 
                     iniciarEscuta(this)
+
                 }
             }
 
@@ -327,6 +346,10 @@ class MainActivity : FragmentActivity() {
             }
         }
     }
+
+    // =====================================================
+    // DESTROY
+    // =====================================================
 
     override fun onDestroy() {
 

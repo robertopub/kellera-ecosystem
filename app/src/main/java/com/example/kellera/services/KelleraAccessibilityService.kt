@@ -1,53 +1,134 @@
 package com.example.kellera.services
 
 import android.accessibilityservice.AccessibilityService
-import android.accessibilityservice.GestureDescription
-import android.graphics.Path
 import android.view.accessibility.AccessibilityEvent
+import android.speech.tts.TextToSpeech
+import java.util.Locale
 
-class KelleraAccessibilityService :
-    AccessibilityService() {
+class KelleraAccessibilityService : AccessibilityService() {
 
-    override fun onAccessibilityEvent(
-        event: AccessibilityEvent?
-    ) {
+    private lateinit var tts: TextToSpeech
+
+    private var ultimaTela = ""
+
+    override fun onServiceConnected() {
+
+        super.onServiceConnected()
+
+        tts = TextToSpeech(this) { status ->
+
+            if (status == TextToSpeech.SUCCESS) {
+
+                tts.language = Locale("pt", "BR")
+
+            }
+        }
     }
 
-    override fun onInterrupt() {
-    }
+    override fun onAccessibilityEvent(event: AccessibilityEvent?) {
 
-    fun performUnlockSwipe() {
+        if (event == null) return
 
-        val path = Path()
+        // ==========================================
+        // DETECTA TROCA DE TELA
+        // ==========================================
 
-        path.moveTo(
-            500f,
-            1800f
-        )
+        if (
+            event.eventType ==
+            AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED
+        ) {
 
-        path.lineTo(
-            500f,
-            300f
-        )
+            val packageName =
+                event.packageName?.toString() ?: return
 
-        val gesture =
-            GestureDescription.Builder()
+            // EVITA REPETIR
+            if (packageName == ultimaTela) return
 
-                .addStroke(
+            ultimaTela = packageName
 
-                    GestureDescription.StrokeDescription(
-                        path,
-                        0,
-                        300
-                    )
+            // ==========================================
+            // HOME / LAUNCHER
+            // ==========================================
+
+            if (
+
+                packageName.contains("launcher") ||
+                packageName.contains("home")
+
+            ) {
+
+                falar(
+
+                    "Celular desbloqueado. Tela inicial detectada. O que deseja fazer agora?"
+
                 )
+            }
 
-                .build()
+            // ==========================================
+            // WHATSAPP
+            // ==========================================
 
-        dispatchGesture(
-            gesture,
+            else if (
+                packageName.contains("whatsapp")
+            ) {
+
+                falar(
+                    "WhatsApp aberto."
+                )
+            }
+
+            // ==========================================
+            // YOUTUBE
+            // ==========================================
+
+            else if (
+                packageName.contains("youtube")
+            ) {
+
+                falar(
+                    "YouTube aberto."
+                )
+            }
+
+            // ==========================================
+            // CHROME
+            // ==========================================
+
+            else if (
+                packageName.contains("chrome")
+            ) {
+
+                falar(
+                    "Google Chrome aberto."
+                )
+            }
+        }
+    }
+
+    // ==========================================
+    // FALA
+    // ==========================================
+
+    private fun falar(texto: String) {
+
+        tts.speak(
+            texto,
+            TextToSpeech.QUEUE_FLUSH,
             null,
             null
         )
+    }
+
+    override fun onInterrupt() {
+
+    }
+
+    override fun onDestroy() {
+
+        super.onDestroy()
+
+        tts.stop()
+
+        tts.shutdown()
     }
 }
