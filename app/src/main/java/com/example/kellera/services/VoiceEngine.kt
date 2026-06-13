@@ -3,6 +3,7 @@ package com.example.kellera.services
 import android.content.Context
 import android.speech.tts.TextToSpeech
 import android.speech.tts.UtteranceProgressListener
+import com.example.kellera.core.GlobalStateManager
 import java.util.Locale
 
 class VoiceEngine(
@@ -31,6 +32,7 @@ class VoiceEngine(
     fun speak(
         text: String
     ) {
+        GlobalStateManager.shouldAnnounce(text)
 
         tts.speak(
             text,
@@ -44,6 +46,7 @@ class VoiceEngine(
         text: String,
         onDone: () -> Unit
     ) {
+        GlobalStateManager.shouldAnnounce(text)
 
         val utteranceId =
             "KELLERA_CALLBACK"

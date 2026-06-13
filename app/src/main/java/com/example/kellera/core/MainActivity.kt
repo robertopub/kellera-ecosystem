@@ -103,6 +103,9 @@ class MainActivity : FragmentActivity() {
 
         super.onCreate(savedInstanceState)
 
+        // 🌍 GLOBAL STATE
+        GlobalStateManager.updateUserName("Usuário")
+
         // 🔊 VOICE ENGINE
         voiceEngine =
             VoiceEngine(this)
@@ -113,16 +116,16 @@ class MainActivity : FragmentActivity() {
 
         accessManager.authenticate {
 
-            voiceEngine.speakAndCallback(
-
-                "Celular desbloqueado. O que deseja fazer agora?"
-
-            ) {
-
+            val welcomeMsg = "Celular desbloqueado. O que deseja fazer agora?"
+            if (GlobalStateManager.shouldAnnounce(welcomeMsg)) {
+                voiceEngine.speakAndCallback(welcomeMsg) {
+                    runOnUiThread {
+                        iniciarEscuta(this)
+                    }
+                }
+            } else {
                 runOnUiThread {
-
                     iniciarEscuta(this)
-
                 }
             }
         }
@@ -162,9 +165,10 @@ class MainActivity : FragmentActivity() {
 
         visionEngine.start()
 
-        voiceEngine.speak(
-            "Kellera iniciado"
-        )
+        val startMsg = "Kellera iniciado"
+        if (GlobalStateManager.shouldAnnounce(startMsg)) {
+            voiceEngine.speak(startMsg)
+        }
 
         enableEdgeToEdge()
 
@@ -285,6 +289,9 @@ class MainActivity : FragmentActivity() {
                     ?.lowercase() ?: ""
 
             // 🔥 PROCESSA COMANDO
+            GlobalStateManager.updateLastCommand(spokenText)
+            GlobalStateManager.updateConversationState("PROCESSING_COMMAND")
+
             commandProcessor.processCommand(
                 spokenText
             )
@@ -298,16 +305,12 @@ class MainActivity : FragmentActivity() {
             )
 
             // 🔥 CONVERSA CONTÍNUA
-            voiceEngine.speakAndCallback(
+            val reply = "Você disse $spokenText. O que deseja fazer agora?"
+            GlobalStateManager.updateConversationState("AWAITING_INPUT")
 
-                "Você disse $spokenText. O que deseja fazer agora?"
-
-            ) {
-
+            voiceEngine.speakAndCallback(reply) {
                 runOnUiThread {
-
                     iniciarEscuta(this)
-
                 }
             }
 
