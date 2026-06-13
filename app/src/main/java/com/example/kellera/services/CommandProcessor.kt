@@ -2,6 +2,7 @@ package com.example.kellera.services
 
 import com.example.kellera.services.VoiceEngine
 import android.content.Context
+import com.example.kellera.core.GlobalStateManager
 
 class CommandProcessor(
     private val context: Context,
@@ -12,6 +13,7 @@ class CommandProcessor(
         AppLauncherService(context)
 
     fun processCommand(command: String) {
+        GlobalStateManager.updateLastCommand(command)
 
         when {
 

@@ -3,6 +3,7 @@ package com.example.kellera.services
 import android.accessibilityservice.AccessibilityService
 import android.view.accessibility.AccessibilityEvent
 import android.speech.tts.TextToSpeech
+import com.example.kellera.core.GlobalStateManager
 import java.util.Locale
 
 class KelleraAccessibilityService : AccessibilityService() {
@@ -41,6 +42,13 @@ class KelleraAccessibilityService : AccessibilityService() {
             val packageName =
                 event.packageName?.toString() ?: return
 
+            val className =
+                event.className?.toString() ?: ""
+
+            // ATUALIZA ESTADO GLOBAL
+            GlobalStateManager.updateCurrentApp(packageName)
+            GlobalStateManager.updateCurrentScreen(className)
+
             // EVITA REPETIR
             if (packageName == ultimaTela) return
 
@@ -57,11 +65,10 @@ class KelleraAccessibilityService : AccessibilityService() {
 
             ) {
 
-                falar(
-
-                    "Celular desbloqueado. Tela inicial detectada. O que deseja fazer agora?"
-
-                )
+                val msg = "Celular desbloqueado. Tela inicial detectada. O que deseja fazer agora?"
+                if (GlobalStateManager.shouldAnnounce(msg)) {
+                    falar(msg)
+                }
             }
 
             // ==========================================
@@ -72,9 +79,10 @@ class KelleraAccessibilityService : AccessibilityService() {
                 packageName.contains("whatsapp")
             ) {
 
-                falar(
-                    "WhatsApp aberto."
-                )
+                val msg = "WhatsApp aberto."
+                if (GlobalStateManager.shouldAnnounce(msg)) {
+                    falar(msg)
+                }
             }
 
             // ==========================================
@@ -85,9 +93,10 @@ class KelleraAccessibilityService : AccessibilityService() {
                 packageName.contains("youtube")
             ) {
 
-                falar(
-                    "YouTube aberto."
-                )
+                val msg = "YouTube aberto."
+                if (GlobalStateManager.shouldAnnounce(msg)) {
+                    falar(msg)
+                }
             }
 
             // ==========================================
@@ -98,9 +107,10 @@ class KelleraAccessibilityService : AccessibilityService() {
                 packageName.contains("chrome")
             ) {
 
-                falar(
-                    "Google Chrome aberto."
-                )
+                val msg = "Google Chrome aberto."
+                if (GlobalStateManager.shouldAnnounce(msg)) {
+                    falar(msg)
+                }
             }
         }
     }

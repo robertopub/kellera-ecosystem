@@ -3,6 +3,7 @@ package com.example.kellera.security
 import androidx.biometric.BiometricPrompt
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.FragmentActivity
+import com.example.kellera.core.GlobalStateManager
 
 class KelleraAccessManager(
     private val activity: FragmentActivity
@@ -28,6 +29,7 @@ class KelleraAccessManager(
 
                         super.onAuthenticationSucceeded(result)
 
+                        GlobalStateManager.updateConversationState("AUTHENTICATED")
                         onSuccess()
                     }
                 }
